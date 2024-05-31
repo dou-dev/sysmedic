@@ -1,8 +1,8 @@
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 import { connection } from '../utils/conexion.js'
 export class loginModel {
   static async validateUser ({ email, password }) {
-    return connection.query('SELECT * FROM user WHERE email = ?', [email])
+    return connection.query('SELECT * FROM user WHERE email = ? AND is_confirmed = 1', [email])
       .then(([rows, fields]) => {
         if (rows.length >= 1) {
           return bcrypt.compare(password, rows[0].password)

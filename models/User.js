@@ -1,5 +1,5 @@
 import { connection } from '../utils/conexion.js'
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 import { generateEmailToken } from '../utils/generateToken.js'
 
 export class userModel {
