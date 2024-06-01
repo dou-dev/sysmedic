@@ -1,7 +1,7 @@
 import { userModel } from "../models/User.js";
 import { verifyToken } from "../utils/generateToken.js";
 import { sendConfirmationEmail } from "../utils/sedEmail.js";
-const path = require("path");
+import path from "path";
 
 export class userController {
   static async getAll(req, res) {
