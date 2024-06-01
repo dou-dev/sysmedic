@@ -1,0 +1,34 @@
+POST https://sysmedic.onrender.com/register
+
+{
+  "name": "Douglas Fernando",
+  "lastName": "Cac",
+  "password": "umg",
+  "email": "dcacc1@miumg.edu.gt"
+}
+
+### inicio de sesion de un usuario
+POST https://sysmedic.onrender.com/login
+
+{
+  "email" : "dcacc1@miumg.edu.gt",
+  "password": "umg"
+}
+
+GET https://sysmedic.onrender.com/doctors
+Content-Type: application/json
+Authorization: Bearer [token]
+
+GET https://sysmedic.onrender.com/doctors/1
+Content-Type: application/json
+Authorization: Bearer [token]
+
+GET https://sysmedic.onrender.com/users
+Content-Type: application/json
+Authorization: Bearer [token]
+
+GET https://sysmedic.onrender.com/users/1
+Content-Type: application/json
+Authorization: Bearer [token]
+
+GET https://sysmedic.onrender.com/login/forgot-password?email=douglascacc2@gmail.com
