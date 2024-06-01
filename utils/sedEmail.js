@@ -14,9 +14,7 @@ const config = {
 };
 
 export async function sendConfirmationEmail({ token, email }) {
-  const confirmationUrl = `http://localhost:${
-    PORT ?? 3030
-  }/confirm?token=${token}`;
+  const confirmationUrl = `https://sysmedic.onrender.com/confirm?token=${token}`;
   const message = {
     from: "royalesuperr@gmail.com",
     to: email,
@@ -30,9 +28,7 @@ export async function sendConfirmationEmail({ token, email }) {
 
 export async function sendResetPasswordEmail({ token, email }) {
   console.log(email);
-  const resetUrl = `http://localhost:${
-    PORT ?? 3030
-  }/login/change-password?token=${token}`;
+  const resetUrl = `https://sysmedic.onrender.com/login/change-password?token=${token}`;
   const message = {
     from: "royalesuperr@gmail.com",
     to: email,
